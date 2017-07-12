@@ -1,8 +1,8 @@
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class TestSkunkApp {
+public class TestRoll {
 
 	@Test
 	public void canRollDie(){
@@ -22,6 +22,4 @@ public class TestSkunkApp {
 		assertTrue(curRoll.total<=12);
 		assertTrue(curRoll.total>=2);
 	}
-	
-
 }
