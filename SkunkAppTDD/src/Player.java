@@ -33,6 +33,7 @@ public class Player {
 
 	public void skunkReset() {
 		this.curTotal = this.gameTotal;
+		this.curTurn = 0;
 	}
 
 	public void clearRound() {
