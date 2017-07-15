@@ -17,4 +17,11 @@ public class TestSkunkApp {
 		assertTrue(curPlayer.isFinal == false);
 	}
 
+	@Test
+	public void testPrintSummary(){
+		String name = "bob";
+		Player p1 = new Player(name);
+		Kitty kit=new Kitty();
+		SkunkApp.turnSummary(p1, kit);
+	}
 }

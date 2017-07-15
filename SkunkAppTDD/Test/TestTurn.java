@@ -18,21 +18,6 @@ public class TestTurn {
 		
 	}
 	
-	@Test
-	public void runTest(){
-		ArrayList<Player> players =new ArrayList<Player>();
-		Player p1=new Player("John");
-		Player p2=new Player("Bob");
-		players.add(p1);
-		players.add(p2);
-		Kitty kit=new Kitty();
-		Turn.startTurn(players, kit);
-		
-		
-		
-		
-		
-	}
 	
 	@Test
 	public void testRegularTurn(){
