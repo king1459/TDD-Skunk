@@ -8,23 +8,7 @@ public class Turn {
 
 		while (!(curPlayer.gameTotal > 99 && curPlayer.isFinal == true)) {
 
-			boolean cont = false;
-			do {
-				Roll curRoll = new Roll();
-				curRoll.roll();
-				boolean skunk = isSkunk(curRoll);
-
-				SkunkApp.printRoll(curPlayer, curRoll);
-				if (skunk == true) {
-					Turn.skunkType(curPlayer, curRoll, kit);
-					break;
-				} else {
-					curPlayer.updateCurScore(curRoll.total);
-					SkunkApp.playerStats(curPlayer);
-					cont = SkunkApp.contRoll();
-				}
-
-			} while (cont == true);
+			regularTurn(kit, curPlayer);
 
 			if (curPlayer.gameTotal > 99) {
 				curPlayer.isFinal = true;
@@ -34,6 +18,26 @@ public class Turn {
 			index = nextIndex(index, size);
 			curPlayer = players.get(index);
 		}
+	}
+
+	public static void regularTurn(Kitty kit, Player curPlayer) {
+		boolean cont = false;
+		do {
+			Roll curRoll = new Roll();
+			curRoll.roll();
+			boolean skunk = isSkunk(curRoll);
+
+			SkunkApp.printRoll(curPlayer, curRoll);
+			if (skunk == true) {
+				Turn.skunkType(curPlayer, curRoll, kit);
+				break;
+			} else {
+				curPlayer.updateCurScore(curRoll.total);
+				SkunkApp.playerStats(curPlayer);
+				cont = SkunkApp.contRoll();
+			}
+
+		} while (cont == true);
 	}
 
 	public static int nextIndex(int index, int size) {
