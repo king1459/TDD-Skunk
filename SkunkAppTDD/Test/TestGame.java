@@ -3,13 +3,6 @@ import java.util.ArrayList;
 import org.junit.Test;
 
 public class TestGame {
-	@Test
-	public void testGenPlayers(){
-		ArrayList<Player> players = new ArrayList<Player>();
-		
-		Game.genPlayerList(players);
-		
-	}
 	
 	@Test
 	public void testValPlayerList(){

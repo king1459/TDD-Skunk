@@ -19,13 +19,6 @@ public class TestTurn {
 	}
 	
 	
-	@Test
-	public void testRegularTurn(){
-		Player curPlayer=new Player("Bob");
-		Kitty kitty=new Kitty();
-		
-		Turn.regularTurn(kitty, curPlayer);
-	}
 	
 	@Test
 	public void testSkunkType(){

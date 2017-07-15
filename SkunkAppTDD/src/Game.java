@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class Game {
 	public static void startGame() {
-		Player curPlayer;
+
 		ArrayList<Player> players = new ArrayList<Player>();
 
 		// create player list, should be done in Game when going through again
-		curPlayer = genPlayerList(players);
+		genPlayerList(players);
 
 		validatePlayerList(players);
 
@@ -21,7 +21,7 @@ public class Game {
 		}
 	}
 
-	public static Player genPlayerList(ArrayList<Player> players) {
+	public static void genPlayerList(ArrayList<Player> players) {
 		Player curPlayer = null;
 		String name;
 		do {
@@ -32,6 +32,5 @@ public class Game {
 			curPlayer = new Player(name);
 			players.add(curPlayer);
 		} while (!(name.isEmpty()));
-		return curPlayer;
 	}
 }
